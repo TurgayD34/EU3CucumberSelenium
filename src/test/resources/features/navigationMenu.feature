@@ -6,7 +6,7 @@
       When the user is on the fleet page
       When the user navigate fleet to vehicles
       Then expected title is vehicles
-
+  @db
     Scenario: marketing -> campaigns
       Given the user is on the login page
       When the user is on the marketing page
