@@ -11,6 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public abstract class BasePage {
     //We cannot use BasePage basepage = new BasePage(); becouse of the class is abstract
     @FindBy(css = "div[class='loader-mask shown']")
@@ -27,6 +29,9 @@ public abstract class BasePage {
 
     @FindBy(linkText = "My User")
     public WebElement myUser;
+
+    @FindBy(xpath = "//span[@class = 'title title-level-1']")
+    public List<WebElement> menuOptions;
 
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
