@@ -1,5 +1,6 @@
 package com.vytrack.step_definations;
 
+import com.vytrack.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -7,12 +8,12 @@ public class Hooks {
 
     @Before
     public void setUp(){
-        System.out.println("\tThis is coming from BEFORE");
+        Driver.get().manage().window().maximize();
     }
 
     @After
     public void tearDown(){
-        System.out.println("\tThis is coming from AFTER");
+        Driver.closeDriver();
     }
 
     @Before("@db")
