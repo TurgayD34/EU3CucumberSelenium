@@ -1,7 +1,7 @@
 @login
 Feature: Users should be able to login
 
-  @driver  @smoke
+  @driver
   Scenario: Login as a driver
     Given the user is on the login page
     When the user enters the driver information
