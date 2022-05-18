@@ -12,6 +12,6 @@ public class ContactPage extends BasePage {
         return Driver.get().findElement(By.xpath(xpath));
     }
 
-    @FindBy(css = ".input-widger")
+    @FindBy(css = ".input-widget")
     public WebElement pageNumber;
 }
