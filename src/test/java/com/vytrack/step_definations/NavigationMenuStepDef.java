@@ -57,7 +57,7 @@ public class NavigationMenuStepDef {
     @When("the user navigates to {string} {string}")
     public void the_user_navigates_to(String tab, String module) {
         DashboardPage dashboardPage = new DashboardPage();
-//        dashboardPage.waitUntilLoaderScreenDisappear();
+        dashboardPage.waitUntilLoaderScreenDisappear();
         dashboardPage.navigateToModule(tab, module);
     }
     @Then("default page number should be {int}")
